@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
+use App\Http\Resources\V1\PostResource;
+
 class PostController extends Controller
 {
     public function index()
@@ -20,7 +22,7 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
-        return $post;
+        return new PostResource($post);
     }
 
     public function update(Request $request, Post $post)

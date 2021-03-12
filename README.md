@@ -23,3 +23,9 @@ El cliente debera tener configurado el header siguente:
 ```php
     "Accept: application/json"
 ```
+
+Creamos el controller:
+
+```console
+    php artisan make:controller Api/LoginController
+```
